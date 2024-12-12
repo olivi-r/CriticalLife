@@ -1,0 +1,30 @@
+name: CriticalLife
+main: me.TheFr0gsL3gs.critical_life.CriticalLifePlugin
+version: 1.0
+api-version: 1.21.4
+author: TheFr0gsL3gs
+commands:
+  add:
+    description: Add late arrival to the game
+    usage: /<command> <player>
+    permission: op
+  setup:
+    description: Start the game
+    usage: /<command>
+    permission: op
+  swap-lives:
+    description: Swap the lives of two players
+    usage: /<command> <player 1> <player 2>
+    permission: op
+  gift-life:
+    description: Gift a life to someone
+    usage: /<command> <player>
+  lives:
+    description: See how many lives you have left
+    usage: /<command>
+  submit:
+    description: Submit a bounty
+    usage: /<command>
+  take-life:
+    description: Take a life away from someone
+    usage: /<command> <player>
