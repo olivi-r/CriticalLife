@@ -6,6 +6,10 @@
 	<artifactId>critical_life</artifactId>
 	<version>1.0</version>
 	<name>Critical Life</name>
+	<properties>
+		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+		<project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
+	</properties>
 	<build>
 		<finalName>CriticalLife</finalName>
 		<sourceDirectory>src/main/java</sourceDirectory>

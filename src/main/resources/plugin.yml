@@ -1,16 +1,16 @@
 name: CriticalLife
-main: me.TheFr0gsL3gs.critical_life.CriticalLifePlugin
+main: me.TheFr0gsL3gs.critical_life.Main
 version: 1.0
 api-version: 1.21.4
 author: TheFr0gsL3gs
 commands:
-  add:
-    description: Add late arrival to the game
-    usage: /<command> <player>
+  event:
+    description: Trigger event
+    usage: /<command> <event>
     permission: op
-  setup:
-    description: Start the game
-    usage: /<command>
+  set-lives:
+    description: Manually set amount of lives for a player
+    usage: /<command> <player> <lives>
     permission: op
   swap-lives:
     description: Swap the lives of two players

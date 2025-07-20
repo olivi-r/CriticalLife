@@ -10,11 +10,11 @@ import net.md_5.bungee.api.ChatColor;
 import net.md_5.bungee.api.chat.ComponentBuilder;
 import net.md_5.bungee.api.chat.TranslatableComponent;
 
-public class BountyEvent extends GlobalEvent {
+public class ReverseBountyEvent extends GlobalEvent {
 
-	public BountyEvent(Main plugin) {
-		super(plugin, "bounty", ChatColor.GREEN + "Bounty", ChatColor.GREEN
-				+ "A challenge has been set, and fate calls upon you. A coveted item has been requested, and if you can claim it before time runs out, a life will be yours to keep. You will receive a personal message revealing your target. Once in your grasp, hold it close and run /submit to seal your victory. Will you rise to the challenge, or let the opportunity slip through your fingers? The clock is ticking...");
+	public ReverseBountyEvent(Main plugin) {
+		super(plugin, "reverse_bounty", ChatColor.RED + "Reverse Bounty", ChatColor.RED
+				+ "A cryptic challenge has been issued to you. A specific item must be claimed and delivered, or the cost will be dire—your very life hangs in the balance. You will receive a personal message revealing your target item. Once found, hold it close and run /submit to seal your fate. Time is fleeting, and failure is not an option. Will you rise to meet the demand, or let the sands of time slip through your fingers?");
 	}
 
 	@Override
@@ -23,7 +23,7 @@ public class BountyEvent extends GlobalEvent {
 			String bounty = plugin.bountyList.get(ThreadLocalRandom.current().nextInt(plugin.bountyList.size()))
 					.getTranslationKey();
 
-			player.spigot().sendMessage(new ComponentBuilder().append("Your target is: ").color(ChatColor.GREEN)
+			player.spigot().sendMessage(new ComponentBuilder().append("Your target is: ").color(ChatColor.RED)
 					.append(new TranslatableComponent(bounty)).color(ChatColor.YELLOW).create());
 			player.getPersistentDataContainer().set(plugin.bountyKey, PersistentDataType.STRING, bounty);
 		});
